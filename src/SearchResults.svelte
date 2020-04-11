@@ -1,7 +1,14 @@
 <script>
+  import { createEventDispatcher } from "svelte";
   import Card from "./Card.svelte";
 
   export let results;
+
+  const dispatch = createEventDispatcher();
+
+  function handleAdd(data) {
+    dispatch("add", data.detail);
+  }
 </script>
 
 <style>
@@ -16,6 +23,6 @@
 
 <ul class="search-results">
   {#each results as result (result.id)}
-    <Card item={result} />
+    <Card on:add={handleAdd} item={result} />
   {/each}
 </ul>

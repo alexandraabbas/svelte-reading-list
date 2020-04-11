@@ -1,6 +1,10 @@
 <script>
   import { db } from "./firebase";
+  import { createEventDispatcher } from "svelte";
+
   export let item;
+
+  const dispatch = createEventDispatcher();
 
   let id = item.id;
   let infoLink = item.volumeInfo.infoLink;
@@ -9,17 +13,20 @@
   let authors = item.volumeInfo.authors;
 
   function add() {
+    let book = {
+      title,
+      authors,
+      infoLink,
+      imageLink,
+      label: "To Read",
+      created: new Date(Date.now())
+    };
+
     db.collection("books")
-      .add({
-        title,
-        authors,
-        infoLink,
-        imageLink,
-        label: "To Read",
-        created: new Date(Date.now())
-      })
+      .add(book)
       .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
+        dispatch("add", book);
       })
       .catch(function(error) {
         console.error("Error adding document: ", error);

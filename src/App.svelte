@@ -45,6 +45,10 @@
   }
 
   onMount(() => handleRefresh());
+
+  function handleAdd(data) {
+    myBooks = [...myBooks, data.detail];
+  }
 </script>
 
 <style>
@@ -64,7 +68,7 @@
 <main class="App">
   <h1>📚 Reading list app</h1>
   <Search bind:query={searchQuery} {handleSubmit} />
-  <SearchResults results={searchResults} />
+  <SearchResults on:add={handleAdd} results={searchResults} />
 
   <button on:click={handleRefresh}>Refresh</button>
   <MyBooks books={myBooks} />
