@@ -24,11 +24,19 @@
     text-align: left;
     margin-left: 20px;
   }
+  p {
+    padding-top: 50px;
+    font-size: 18px;
+  }
 </style>
 
 <h1>📖 My books</h1>
-<ul class="search-results">
-  {#each books as book (book.id)}
-    <Book on:delete={handleDelete} {book} />
-  {/each}
-</ul>
+{#if books.length == 0}
+  <p>You don't have any books yet. 🤭</p>
+{:else}
+  <ul class="search-results">
+    {#each books as book (book.id)}
+      <Book on:delete={handleDelete} {book} />
+    {/each}
+  </ul>
+{/if}
