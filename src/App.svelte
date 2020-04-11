@@ -3,6 +3,7 @@
   import SearchResults from "./SearchResults.svelte";
   import MyBooks from "./MyBooks.svelte";
 
+  import { onMount } from "svelte";
   import { db } from "./firebase";
 
   let searchQuery = "";
@@ -42,6 +43,8 @@
       myBooks = data;
     });
   }
+
+  onMount(() => handleRefresh());
 </script>
 
 <style>
@@ -59,11 +62,10 @@
 </style>
 
 <main class="App">
-  <h1>Books API search app</h1>
+  <h1>📚 Reading list app</h1>
   <Search bind:query={searchQuery} {handleSubmit} />
   <SearchResults results={searchResults} />
 
-  <h2>My Books</h2>
   <button on:click={handleRefresh}>Refresh</button>
   <MyBooks books={myBooks} />
 </main>
