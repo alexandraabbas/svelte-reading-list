@@ -21,6 +21,6 @@
       bind:value={query}
       class="search-input"
       type="search"
-      placeholder="Search Google's Book API" />
+      placeholder="🔍 Search Google's Book API" />
   </form>
 </div>
