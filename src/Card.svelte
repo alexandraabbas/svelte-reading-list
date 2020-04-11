@@ -26,6 +26,7 @@
       .add(book)
       .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
+        book.id = docRef.id;
         dispatch("add", book);
       })
       .catch(function(error) {

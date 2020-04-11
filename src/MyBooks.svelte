@@ -1,10 +1,14 @@
 <script>
   import Book from "./Book.svelte";
+  import { createEventDispatcher } from "svelte";
 
   export let books;
 
+  const dispatch = createEventDispatcher();
+
   function handleDelete(data) {
     books = books.filter(item => item.id !== data.detail);
+    dispatch("delete", books);
   }
 </script>
 

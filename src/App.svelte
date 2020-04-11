@@ -38,16 +38,18 @@
     return documents;
   }
 
-  function handleRefresh() {
+  onMount(() =>
     getMyBooks().then(data => {
       myBooks = data;
-    });
-  }
-
-  onMount(() => handleRefresh());
+    })
+  );
 
   function handleAdd(data) {
     myBooks = [...myBooks, data.detail];
+  }
+
+  function handleDelete(data) {
+    myBooks = data.detail;
   }
 </script>
 
@@ -69,7 +71,5 @@
   <h1>📚 Reading list app</h1>
   <Search bind:query={searchQuery} {handleSubmit} />
   <SearchResults on:add={handleAdd} results={searchResults} />
-
-  <button on:click={handleRefresh}>Refresh</button>
-  <MyBooks books={myBooks} />
+  <MyBooks on:delete={handleDelete} books={myBooks} />
 </main>
