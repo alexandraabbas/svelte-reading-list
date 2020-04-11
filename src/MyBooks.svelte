@@ -12,9 +12,13 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     padding: 20px;
   }
+  h1 {
+    text-align: left;
+    margin-left: 20px;
+  }
 </style>
 
-<p>myBooks length: {books.length}</p>
+<h1>📖 My books</h1>
 <ul class="search-results">
   {#each books as book (book.id)}
     <Book {book} />
