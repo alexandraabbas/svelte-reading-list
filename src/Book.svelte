@@ -1,6 +1,10 @@
 <script>
   import { db } from "./firebase";
+  import { createEventDispatcher } from "svelte";
+
   export let book;
+
+  const dispatch = createEventDispatcher();
 
   let infoLink = book.infoLink;
   let imageLink = book.imageLink;
@@ -14,6 +18,7 @@
       .delete()
       .then(function() {
         console.log("Document successfully deleted!");
+        dispatch("delete", book.id);
       })
       .catch(function(error) {
         console.error("Error removing document: ", error);
