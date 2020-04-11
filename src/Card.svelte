@@ -29,19 +29,31 @@
 
 <style>
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 5px;
+    border: 1px solid #e2e2e2;
   }
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.2);
   }
   .container {
     padding: 2px 16px;
   }
   img {
-    border-radius: 5px 5px 0 0;
     height: 189px;
+    margin-top: 12px;
+    border: 1px solid #b9b9b9;
+  }
+  a {
+    color: #333;
+  }
+  .add {
+    padding-bottom: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: #f4f4f4;
+    cursor: pointer;
+    margin-bottom: 15px;
   }
 </style>
 
@@ -56,6 +68,6 @@
       </a>
       <p>{authors}</p>
     </div>
-    <button on:click={add}>Add to My Books</button>
+    <button class="add" on:click={add}>✅ Add to My books</button>
   </div>
 </li>
