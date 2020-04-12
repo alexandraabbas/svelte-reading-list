@@ -9,13 +9,19 @@
   let id = item.id;
   let infoLink = item.volumeInfo.infoLink;
   let title = item.volumeInfo.title;
-  let authors = item.volumeInfo.authors;
+  let authors = null;
   let imageLink = null;
 
   if (item.volumeInfo.imageLinks) {
     imageLink = item.volumeInfo.imageLinks.smallThumbnail;
   } else {
     imageLink = "img/thumbnail.png";
+  }
+
+  if (item.volumeInfo.authors) {
+    authors = item.volumeInfo.authors;
+  } else {
+    authors = "Unknown";
   }
 
   function add() {
