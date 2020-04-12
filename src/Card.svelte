@@ -19,7 +19,7 @@
   }
 
   if (item.volumeInfo.authors) {
-    authors = item.volumeInfo.authors;
+    authors = item.volumeInfo.authors.join(", ");
   } else {
     authors = "Unknown";
   }
