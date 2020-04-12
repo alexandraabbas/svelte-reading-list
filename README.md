@@ -6,7 +6,7 @@ This is my first project using Svelte. It's a reading list app using Firestore a
   <img src="public/img/screenshot.png">
 </kbd>
 
-## Get started
+## 🚀 Get started
 
 If you'd like to run this app locally, create a `.env` file in the root folder with the following necessary variables:
 
