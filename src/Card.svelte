@@ -8,9 +8,15 @@
 
   let id = item.id;
   let infoLink = item.volumeInfo.infoLink;
-  let imageLink = item.volumeInfo.imageLinks.smallThumbnail;
   let title = item.volumeInfo.title;
   let authors = item.volumeInfo.authors;
+  let imageLink = null;
+
+  if (item.volumeInfo.imageLinks) {
+    imageLink = item.volumeInfo.imageLinks.smallThumbnail;
+  } else {
+    imageLink = "img/thumbnail.png";
+  }
 
   function add() {
     let book = {
