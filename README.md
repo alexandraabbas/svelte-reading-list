@@ -1,6 +1,6 @@
 # 📚 Svelte reading list app
 
-This is my first project using Svelte. It's a reading list app using Firabase and Google's Books API.
+This is my first project using Svelte. It's a reading list app using Firestore and Google's Books API.
 
 <kbd>
   <img src="public/img/screenshot.png">
