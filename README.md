@@ -2,8 +2,9 @@
 
 This is my first project using Svelte. It's a reading list app using Firabase and Google's Books API.
 
+<kbd>
 ![screenshot](public/img/screenshot.png)
-
+</kbd>
 
 ## Get started
 
