@@ -18,7 +18,9 @@
 
     fetch(endpoint)
       .then(response => response.json())
-      .then(data => (searchResults = [...data.items]))
+      .then(data => {
+        searchResults = [...data.items];
+      })
       .catch(error => alert(error));
   }
 
