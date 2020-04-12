@@ -2,11 +2,11 @@
 
 This is my first project using Svelte. It's a reading list app using Firestore and Google's Books API.
 
+If you have any feedback, hit me up on Twitter [@alexandraabbas](https://twitter.com/alexandraabbas).
+
 <kbd>
   <img src="public/img/screenshot.png">
 </kbd>
-
-If you have any feedback, hit me up on Twitter: [@alexandraabbas](https://twitter.com/alexandraabbas).
 
 ## 🚀 Get started
 
