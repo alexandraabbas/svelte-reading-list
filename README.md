@@ -1,22 +1,13 @@
-*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# 📚 Svelte reading list app
 
----
+This is my first project using Svelte. It's a reading list app using Firabase and Google's Books API.
 
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+![screenshot](public/img/screenshot.png)
 
 
 ## Get started
+
+If you'd like to run this app locally, create a `.env` file with the necessary variables. 
 
 Install the dependencies...
 
@@ -31,10 +22,7 @@ npm install
 npm run dev
 ```
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
+Navigate to [localhost:5000](http://localhost:5000). You should see the app running.
 
 ## Building and running in production mode
 
