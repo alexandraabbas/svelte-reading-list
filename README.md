@@ -8,12 +8,27 @@ This is my first project using Svelte. It's a reading list app using Firestore a
 
 ## Get started
 
-If you'd like to run this app locally, create a `.env` file with the necessary variables. 
+If you'd like to run this app locally, create a `.env` file in the root folder with the following necessary variables:
+
+- `FIREBASE_API_KEY`
+- `FIREBASE_AUTH_DOMAIN`
+- `FIREBASE_DATABASE_URL`
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_BUCKET`
+- `FIREBASE_SENDER_ID`
+- `FIREBASE_APP_ID`
+- `BOOKS_API_KEY`
+
+Your `BOOKS_API_KEY` will probably be the same as your `FIREBASE_API_KEY` is you're using the same Google Cloud project.
+
+For more more information about how to generate your Firabase config object, visit the [Firebase documentation](https://firebase.google.com/docs/web/setup#config-object).
+
+After configuring Firebase, create a Firestore instance and a collection named `books`. Visit the [Cloud Firestore documentation](https://firebase.google.com/docs/firestore/quickstart) for more information.
 
 Install the dependencies...
 
 ```bash
-cd svelte-app
+cd svelte-reading-app
 npm install
 ```
 
